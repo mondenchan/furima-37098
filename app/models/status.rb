@@ -10,6 +10,5 @@ class ItemStatus < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  #has_many :items
+  has_many :items
 end
-© 2021 GitHub, Inc.
