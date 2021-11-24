@@ -1,4 +1,4 @@
-class OrderForm
+class OrderDelivery
   include ActiveModel::Model
   
   attr_accessor :user_id, :item_id, :postal_code, :prefecture_id, :city, :house_number, :build_number, :phone_number, :token
