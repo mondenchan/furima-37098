@@ -96,7 +96,12 @@ RSpec.describe OrderDelivery, type: :model do
         expect(@order_delivery.errors.full_messages).to include('Phone number is invalid')
       end
       it '電話番号が12桁以上あると保存できないこと' do
-        @order_delivery.phone_number = 12_345_678_910_123_111
+        @order_delivery.phone_number = "090123456789"
+        @order_delivery.valid?
+        expect(@order_delivery.errors.full_messages).to include('Phone number is invalid')
+      end
+      it '電話番号が9桁であると保存できないこと' do
+        @order_delivery.phone_number = "090123456"
         @order_delivery.valid?
         expect(@order_delivery.errors.full_messages).to include('Phone number is invalid')
       end
