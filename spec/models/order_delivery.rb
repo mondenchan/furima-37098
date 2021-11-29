@@ -5,7 +5,7 @@ RSpec.describe OrderDelivery, type: :model do
     user = FactoryBot.create(:user)
     item = FactoryBot.create(:item)
     @order_delivery = FactoryBot.build(:order_delivery, user_id: user.id, item_id: item.id)
-    sleep(0.2)
+#    sleep(0.2)
   end
 
   describe '配送先情報の保存' do
